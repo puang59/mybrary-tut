@@ -56,9 +56,9 @@ router.get('/:id', async (req, res) => {
 router.get('/:id/edit', async (req, res) => {
     try {
         const author = await Author.findById(req.params.id)
-        res.render('authors/new', { author: author })
+        res.render('authors/edit', { author: author })
     } catch {
-        res.redirect("/authors")
+        res.redirect('/authors')
     }
 })
 
